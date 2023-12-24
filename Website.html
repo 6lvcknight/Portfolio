@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+  <script src="script.js"></script>
+
+  <nav id="desktop-nav">
+    <div class="logo">Folu Aderibigbe</div>
+    <ul class="nav-links">
+      <li><a href="#desktop-nav"></a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Folu Aderibigbe</div>
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="menu-links">
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav class="custom-nav">
+    <a href="#profile" class="" aria-label="Desktop-nav">
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 9.226l-8-6.21-8 6.21v-2.532l8-6.21 8 6.21zM14 9v6h-4v-4h-4v4h-4v-6l6-4.5z">
+        </path>
+      </svg>
+    </a>
+    
+    <a href="#about" class="" aria-label="About">
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path d="M858.5 763.6a374 374 0 0 0-80.6-119.5 375.63 375.63 0 0 0-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 
+          362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 
+          375.63 0 0 0-80.6 119.5A371.7 371.7 0 0 0 136 901.8a8 8 0 0 0 8 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 
+          132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 0 0 8-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 
+          0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z">
+        </path>
+      </svg>
+    </a>
+    
+    <a href="#experience" class="" aria-label="Experience">
+      <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 
+          4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+        </path>
+      </svg>
+    </a>
+    
+    <a href="#projects" class="" aria-label="Projects">
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 2c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h3.586L12 21.414 15.414 18H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5zm14 14h-4.414L12 18.586 9.414 16H5V4h14v12z"></path>
+        <path d="M7 7h10v2H7zm0 4h7v2H7z"></path>
+      </svg>
+    </a>
+
+    <a href="#contact" class="" aria-label="Contacts">
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 
+          48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/>
+      </svg>
+    </a>
+
+  </nav>
+
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/IMG_1976.jpeg" alt="profile picture"/>
+    </div>
+
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Folu Aderibigbe</h1>
+      <p class="section__text__p2">I'm a Computer Science undergrad at Ontario tech University.</p>
+
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Foluwa resume.pdf')">Download Resume</button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me</button>
+      </div>
+
+      <div id="social-container">
+        <img src="./assets/linkedin.png" alt="My linkedIn Profile"
+        class="icon" onclick="location.href='https://linkedin.com/in/foluwaderibigbe'">
+
+        <img src="./assets/github.png" alt="My Github Repositories"
+        class="icon" onclick="location.href='https://github.com/6lvcknight'">
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img
+          src="./assets/exported_image.jpg"
+          alt="Profile picture"
+          class="about-pic"
+        />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          
+          <div class="details-container">
+            <img src="./assets/experience.png"
+                 alt="Experience icon"
+                 class="icon"/>
+            <h3 class="sub-title">Experience:</h3>
+            <p>learning</p>
+          </div>
+
+          <div class="details-container">
+            <img src="./assets/education.png"
+                 alt="Education icon"
+                 class="icon"/>
+            <h3 class="sub-title">Education:</h3>
+            <p>B.Sc. Computer Science and Math</p>
+          </div>
+        </div>
+        <div class="text-container"> 
+          <p>
+            A Computer Science student deeply passionate about the transformative power of Data Science and Machine Learning. 
+            My academic background has provided me with a strong foundation in programming and algorithms, 
+            which complements my drive to explore the innovative realms of data analysis and AI-driven solutions. 
+            My journey is marked by a commitment to applying data to solve complex challenges and a keen interest in predictive analytics. 
+            As I advance in my studies, I am eager to engage in real-world applications, 
+            particularly in developing machine learning models and exploring AI applications. 
+            My ambition is to contribute meaningfully to this dynamic field while continuously evolving and enhancing my skills.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="section__text__p1">My skills and</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container"> 
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Programming Languages</h2>
+          <div class="article-container">
+
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>Python</h3>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>Java</h3>
+                <p>Experienced</p>
+              </div>
+            </div>
+            
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>R</h3>
+                <p>Basic</p>
+              </div>
+            </div>
+            
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>SQL</h3>
+                <p>Experienced</p>
+              </div>
+            </div>
+            
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>Javacript</h3>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>C++</h3>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>HTML</h3>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>CSS</h3>
+                <p>Intermediate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Data Science</h2>
+          <div class="article-container">
+
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>Pandas</h3>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>NumPy</h3>
+                <p>Experienced</p>
+              </div>
+            </div>
+            
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>SciPy</h3>
+                <p>Basic</p>
+              </div>
+            </div>
+            
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>Matplotlib</h3>
+                <p>Experienced</p>
+              </div>
+            </div>
+            
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>Seaborn</h3>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>Tableau</h3>
+                <p>Basic</p>
+              </div>
+            </div>
+
+            <div class="article">
+              <img src="./assets/checkmark.png"
+                   alt="Experience icon"
+                   class="icon"
+              />
+              <div class="article-text">
+                <h3>TensorFlow</h3>
+                <p>Basic</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>       
+  </section>
+
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img 
+              src="./assets/project-1.png"
+              alt="CalendarCPP"
+              class="project-img"
+              />
+          </div>
+          <h2 class="expeience-sub-title project-title">CalendarCPP</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/6lvcknight/CalendarCPP'"
+              >Github</button>
+              <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/6lvcknight/CalendarCPP'"
+              >Live demo</button>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img 
+              src="./assets/project-2.png"
+              alt="Project 2"
+              class="project-img"
+              />
+          </div>
+          <h2 class="expeience-sub-title project-title">Changing Weather Extremes</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/6lvcknight/CalendarCPP'"
+              >Github</button>
+              <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/6lvcknight/CalendarCPP'"
+              >Live demo</button>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img 
+              src="./assets/project-3.png"
+              alt="Project 3"
+              class="project-img"
+              />
+          </div>
+          <h2 class="expeience-sub-title project-title">Project Three</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/6lvcknight/CalendarCPP'"
+              >Github</button>
+              <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/6lvcknight/CalendarCPP'"
+              >Live demo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-container">
+      <img
+        src="./assets/email.png"
+        alt="Email icon"
+        class="contact-icon email-icon"
+        />
+        <p><a href="mailto:foluwaderibigbe@gmail.com">foluwaderibigbe@gmail.com</a></p>
+    </div>
+    <div class="contact-info-container">
+      <img
+        src="./assets/linkedin.png"
+        alt="linkedIn icon"
+        class="contact-icon"
+        />
+        <p><a href="https://linkedin.com/in/foluwaderibigbe">LinkedIn</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>&#169; 2023 Folu Aderibigbe. All rights reserved</p>
+  </footer>
+
+  
+</body>
+</html>
