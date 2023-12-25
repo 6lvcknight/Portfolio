@@ -423,7 +423,6 @@ section {
   height: 2.5rem;
 }
 
-/* Apply styles to the navigation menu */
 .custom-nav a {
   display: flex;
   color: whitesmoke;
@@ -505,5 +504,5 @@ footer p {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Make sure it doesn't overlap your content */
+  z-index: -1; 
 }
