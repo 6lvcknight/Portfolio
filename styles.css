@@ -23,7 +23,7 @@ p {
 
 a,
 .btn {
-  transition: all 3000ms ease;
+  transition: all 300ms ease;
 }
 
 /* DESKTOP */
@@ -466,13 +466,12 @@ section {
   color: whitesmoke;
   transform: scale(1.1);
   box-shadow: 0 0 15px whitesmoke;
-  transition: 3000ms;
+  transition: 1000ms;
 }
 
 .custom-nav a.inactive {
   background-color: none;
   color: none;
-  transition: 3000ms;
 }
 
 .custom-nav a:hover {
